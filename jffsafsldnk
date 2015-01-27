@@ -1,0 +1,35 @@
+[33mcommit f9c23b5dd968326c436454dad9b74d8bb52677f8[m
+Author: Talamantez <robert.talamantez2@gmail.com>
+Date:   Mon Jan 26 19:59:17 2015 -0800
+
+    figure out amd with ko.keybindings
+
+[33mcommit e813337d26d7c5b1a303c0b912e8cb9a3bedf7b2[m
+Author: Talamantez <robert.talamantez2@gmail.com>
+Date:   Mon Jan 26 18:26:19 2015 -0800
+
+    addAspiration() is working
+
+[33mcommit b84f57866990ddb1a7814261f4750078d6c5e733[m
+Author: Talamantez <robert.talamantez2@gmail.com>
+Date:   Mon Jan 26 17:57:43 2015 -0800
+
+    knockout simple bindings work, about to add lists
+
+[33mcommit dbefede0c2ec4660f1b23ddc52c9872f0d9125cc[m
+Author: Talamantez <robert.talamantez2@gmail.com>
+Date:   Mon Jan 26 16:21:54 2015 -0800
+
+    hero screen with inner template working
+
+[33mcommit 7462d8fe9ac9ff9d16bb7be7d6f7a829f612e961[m
+Author: Talamantez <robert.talamantez2@gmail.com>
+Date:   Mon Jan 26 16:12:31 2015 -0800
+
+    bootstrap theme active
+
+[33mcommit 2907d7b1d0356a9c0d9e52f89e2c8f11f2c955fe[m
+Author: Talamantez <robert.talamantez2@gmail.com>
+Date:   Mon Jan 26 12:11:43 2015 -0800
+
+    merging aspirations page with bootstrap template

@@ -1,7 +1,7 @@
 define(["knockout", "text!./aspirations.html"], function(ko, aspirationsTemplate) {
 
-  function Aspiration(content){
-    var self = this;
+  var Aspiration = function(content){
+    self=this;
     self.content = content;
   }
 
@@ -10,28 +10,22 @@ define(["knockout", "text!./aspirations.html"], function(ko, aspirationsTemplate
     self.message = ko.observable('What do you ASPIRE to do?');
     self.aspiration = ko.observable();
     self.aspirations = ko.observableArray([
-        new Aspiration("Ride a roller coaster"),
-        new Aspiration("Crash a helicopter")
+        new Aspiration('Build a sustainable future for humanity')
       ]);
-    self.Aspiration = function(content){
-      var self = this;
-      self.content = content;
-    }
+
     self.addAspiration = function(content){
         console.log('adding aspiration');
-        self.aspirations.push( new Aspiration( self.aspiration() ) );
+        self.aspirations.push(new Aspiration(self.aspiration()));
+        console.log(self.aspirations());
       }
   }
 
-  AspirationsViewModel.prototype.doSomething = function() {
-    self.message('You invoked doSomething() on the viewmodel.');
+  AspirationsViewModel.prototype.someFunction = function() {
   };
 
-  // ko.applyBindings(new AspirationsViewModel());
-  return { viewModel: AspirationsViewModel(), template: aspirationsTemplate };
- 
-});
+  return { viewModel: AspirationsViewModel, template: aspirationsTemplate };
 
+});
   
 /*function AppViewModel() {	
     this.firstName = "Bert";
