@@ -1,7 +1,7 @@
 define(["knockout", "text!./aspirations.html"], function(ko, aspirationsTemplate) {
 
   function AspirationsViewModel(route) {
-    this.message = ko.observable('Enter an aspiration:');
+    this.message = ko.observable('What do you ASPIRE to do?');
     this.aspiration = ko.observable();
   }
 
@@ -14,7 +14,7 @@ define(["knockout", "text!./aspirations.html"], function(ko, aspirationsTemplate
 
 });
 
-
+  
 /*function AppViewModel() {	
     this.firstName = "Bert";
     this.lastName = "Bertington";
