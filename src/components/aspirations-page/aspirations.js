@@ -3,7 +3,16 @@ define(["knockout", "text!./aspirations.html"], function(ko, aspirationsTemplate
   function AspirationsViewModel(route) {
     this.message = ko.observable('What do you ASPIRE to do?');
     this.aspiration = ko.observable();
+    this.aspirations = ko.observableArray([]);
+    this.addAspiration = function(){
+        console.log('adding aspiration');
+        this.aspirations.push(
+          this.aspiration()
+          );
+        console.log(this.aspirations());
+      }
   }
+
 
   AspirationsViewModel.prototype.doSomething = function() {
     this.message('You invoked doSomething() on the viewmodel.');
