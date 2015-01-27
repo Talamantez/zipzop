@@ -656,7 +656,9 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
   border: 1px solid #eee;
 }
 .input-lead-in {
-  width: 200px;
+  padding: 4px; 
+  width: 200px; 
+  color: #333333; 	
 }
 .widget-contact {
 	text-align: left;
