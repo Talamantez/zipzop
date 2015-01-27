@@ -36,6 +36,11 @@ gulp.task('js', function () {
         .pipe(uglify({ preserveComments: 'some' }))
         .pipe(gulp.dest('./dist/'));
 });
+// Copies js-bocor files to dist/js/
+gulp.task('js-bocor', function(){
+    return gulp.src('./src/js/**/*')
+        .pipe(gulp.dest('./dist/js/'))
+});
 
 // Concatenates CSS files, rewrites relative paths to Bootstrap fonts, copies Bootstrap fonts
 gulp.task('css', function () {
@@ -46,6 +51,21 @@ gulp.task('css', function () {
         fontFiles = gulp.src('./src/bower_modules/components-bootstrap/fonts/*', { base: './src/bower_modules/components-bootstrap/' });
     return es.concat(combinedCss, fontFiles)
         .pipe(gulp.dest('./dist/'));
+});
+// Copies CSS-bocor files from src/css to dist/css/
+gulp.task('css-bocor', function(){
+    return gulp.src('./src/css/**/*')
+        .pipe(gulp.dest('./dist/css/'))
+});
+// Copies font-awesome from src/font-awesome to dist/font-awesome
+gulp.task('font-awesome', function(){
+    return gulp.src('./src/font-awesome/**/*')
+        .pipe(gulp.dest('./dist/font-awesome/'));
+});
+// Copies color folder from src/color to dist/color/
+gulp.task('color', function(){
+    return gulp.src('./src/color/**/*')
+        .pipe(gulp.dest('./dist/color/'));
 });
 
 // Copies index.html, replacing <script> and <link> tags to reference production URLs
@@ -64,7 +84,12 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
-gulp.task('default', ['html', 'js', 'css'], function(callback) {
+gulp.task('img', function(){
+    return gulp.src('./src/img/**/*')
+        .pipe(gulp.dest('./dist/img/'));
+});
+
+gulp.task('default', ['html', 'js', 'css', 'img', 'js-bocor', 'css-bocor', 'font-awesome','color'], function(callback) {
     callback();
     console.log('\nPlaced optimized files in ' + chalk.magenta('dist/\n'));
 });
