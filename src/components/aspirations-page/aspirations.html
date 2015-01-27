@@ -1,6 +1,6 @@
 <h2>Aspirations</h2>
 <div class = "row">
-  	<div class="col-lg-5 col-lg-offset-1">
+  	<div id="inputDiv" class="col-lg-5 col-lg-offset-1">
 		<p data-bind='text: message'></p>
 
 		<p><input style="width: 200px; color:#333333" data-bind="value: aspiration, valueUpdate:'afterkeydown', enterkey: addAspiration"></input></p>
@@ -8,57 +8,18 @@
 		<button id="add-aspiration" class="btn btn-skin" data-bind='click: addAspiration '>Add Aspiration</button>
 	</div>
 
-  	<div class="col-lg-5 col-lg-offset-0">
-			<p>
+  	<div id="outputDiv" class="col-lg-5 col-lg-offset-0">
+			<p style="padding: 3px">
 				<strong data-bind="text: aspiration"></strong>
 			</p>
 
-<!-- 		<div  data-bind="visible: 1">
-	<p>
-		<strong data-bind="text: aspirations()[5]"></strong>
-	</p>
-
-	<p>
-		<strong data-bind="text: aspirations()[4]"></strong>
-	</p>
-
-	<p>
-		<strong data-bind="text: aspirations()[3]"></strong>
-	</p>
-	<p>
-		<strong data-bind="text: aspirations()[2]"></strong>
-	</p>
-	<p>
-		<strong data-bind="text: aspirations()[1]"></strong>
-	</p>
-	<p>
-		<strong data-bind="text: aspirations()[0]"></strong>
-	</p>
-</div>	
- -->
-
-<div data-bind="foreach: aspirations">
-		<p><strong data-bind="text: $data"></strong></p>
-</div>
-
-<!-- <table>
-					    <thead><tr>
-					        <th>Aspiration</th><th></th>
-					    </tr></thead>
-					    Todo: Generate table body
-					    <tbody data-bind="foreach: aspirations">
-					        <tr>
-					            <td><p data-bind="text: $data"><p></td>
-					            <td><a href="#Aspirations" data-bind="click: $root.removeAspiration">Remove</a></td>
-					        </tr>
-					    </tbody>
-					</table> -->					
-<!-- 			<p>	foreach: aspirations:</p>															
-		    <tbody data-bind="foreach: aspirations">
-		            <tr>
-		               	<td data-bind="text: $data"></td>
-		            </tr>
-		    </tbody> -->
+		<div data-bind="foreach: aspirations">
+			<p><strong data-bind="text: $data"></strong></p>
+		</div>
 	</div>	
 
  </div>
+
+<script>
+	$('div.section:empty').hide();
+</script>
